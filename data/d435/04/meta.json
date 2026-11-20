@@ -1,0 +1,135 @@
+{
+ "camera": "d435",
+ "shot": 4,
+ "captured_at": "2026-11-19T21:17:08.879",
+ "width": 640,
+ "height": 360,
+ "K": [
+  [
+   465.6,
+   0,
+   320.0
+  ],
+  [
+   0,
+   465.6,
+   180.0
+  ],
+  [
+   0,
+   0,
+   1
+  ]
+ ],
+ "K_note": "pinhole intrinsics shared by real_rgb, real_depth_mm, sim_*, cdm_* and sim_sdk_* (the simulated camera)",
+ "depth_format": "uint16 PNG in millimetres, 0 = invalid; *.npy is float32 metres",
+ "files": [
+  "real_rgb.png",
+  "real_depth_mm.png",
+  "real_depth_sensor.png",
+  "sim_rgb.png",
+  "sim_depth_mm.png",
+  "sim_depth_m.npy",
+  "cdm_depth_mm.png",
+  "cdm_depth_m.npy"
+ ],
+ "raw_valid_fraction": 0.9607,
+ "sim_fov_coverage": 0.99722,
+ "real_sensor": {
+  "device": "Intel RealSense D435i (USB, on a tripod at the simulated head-camera pose)",
+  "color_intrinsics": {
+   "width": 640,
+   "height": 360,
+   "fx": 455.4391784667969,
+   "fy": 455.4892578125,
+   "cx": 323.16156005859375,
+   "cy": 185.22845458984375,
+   "distortion_model": "distortion.inverse_brown_conrady",
+   "distortion_coeffs": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "depth_intrinsics": {
+   "width": 848,
+   "height": 480,
+   "fx": 426.0446472167969,
+   "fy": 426.0446472167969,
+   "cx": 429.9337158203125,
+   "cy": 240.142333984375,
+   "distortion_model": "distortion.brown_conrady",
+   "distortion_coeffs": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "fps": 30,
+  "postprocessing": "none",
+  "sdk": "librealsense 2.59.2",
+  "firmware": "5.16.0.1",
+  "depth_to_color": {
+   "rotation": [
+    0.9999366402626038,
+    -0.007363712880760431,
+    -0.008517368696630001,
+    0.007428385782986879,
+    0.9999436140060425,
+    0.00758649967610836,
+    0.008461023680865765,
+    -0.0076492889784276485,
+    0.99993497133255
+   ],
+   "translation": [
+    0.015032134018838406,
+    -0.0001918959605973214,
+    0.00023632912780158222
+   ]
+  },
+  "depth_scale_m_per_unit": 0.0010000000474974513
+ },
+ "sim": {
+  "scene": "desk_r4/desk_snacks.usda",
+  "pos": [
+   0.6,
+   0.0,
+   1.325
+  ],
+  "look_at": [
+   0.0,
+   0.0,
+   0.725
+  ],
+  "w": 640,
+  "h": 360,
+  "hfov_deg": 69.0,
+  "K": [
+   [
+    465.60288917518244,
+    0.0,
+    320.0
+   ],
+   [
+    0.0,
+    465.60288917518244,
+    180.0
+   ],
+   [
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "depth": "distance_to_image_plane (m)",
+  "frame": 2002,
+  "time": 1795090636.0877228
+ },
+ "cdm": {
+  "checkpoint": "depth-anything/camera-depth-model-d435 (cdm_d435.ckpt)"
+ }
+}

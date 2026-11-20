@@ -1,0 +1,187 @@
+{
+ "camera": "d405",
+ "shot": 1,
+ "captured_at": "2026-11-20T22:40:27.613",
+ "width": 424,
+ "height": 240,
+ "K": [
+  [
+   223.40138655956403,
+   0,
+   212.0
+  ],
+  [
+   0,
+   223.40138655956403,
+   120.0
+  ],
+  [
+   0,
+   0,
+   1
+  ]
+ ],
+ "K_note": "pinhole intrinsics shared by real_rgb, real_depth_mm, sim_*, cdm_* and sim_sdk_* (the simulated camera)",
+ "depth_format": "uint16 PNG in millimetres, 0 = invalid; *.npy is float32 metres",
+ "files": [
+  "real_rgb.png",
+  "real_depth_mm.png",
+  "real_rgb_sensor.png",
+  "real_depth_sensor.png",
+  "sim_rgb.png",
+  "sim_depth_mm.png",
+  "sim_depth_m.npy",
+  "cdm_depth_mm.png",
+  "cdm_depth_m.npy"
+ ],
+ "raw_valid_fraction": 0.8804,
+ "sim_fov_coverage": 1.0,
+ "real_sensor": {
+  "device": "Intel RealSense D405 (right-wrist camera of a ROBOTIS AI Worker)",
+  "color_intrinsics": {
+   "width": 424,
+   "height": 240,
+   "fx": 217.56338500976562,
+   "fy": 217.34800720214844,
+   "cx": 212.5456085205078,
+   "cy": 121.69072723388672,
+   "distortion_model": "plumb_bob (k1 k2 p1 p2 k3)",
+   "distortion_coeffs": [
+    -0.05049135908484459,
+    0.062063299119472504,
+    -0.0004599689564201981,
+    0.00039648963138461113,
+    -0.02156604826450348
+   ]
+  },
+  "depth_intrinsics": {
+   "width": 480,
+   "height": 270,
+   "fx": 248.00306701660156,
+   "fy": 248.00306701660156,
+   "cx": 242.72779846191406,
+   "cy": 134.22483825683594,
+   "distortion_model": "none",
+   "distortion_coeffs": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "fps": 30,
+  "postprocessing": "robot RealSense node settings as is (see settings)",
+  "sdk": "realsense2_camera (ROS 2)",
+  "settings": {},
+  "topics": [
+   "color/image_rect_raw",
+   "depth/image_rect_raw",
+   "color/camera_info",
+   "depth/camera_info",
+   "extrinsics/depth_to_color"
+  ],
+  "depth_to_color": {
+   "R": [
+    [
+     0.9999701380729675,
+     -0.00540795037522912,
+     0.005520876031368971
+    ],
+    [
+     0.00541596207767725,
+     0.9999843239784241,
+     -0.0014372467994689941
+    ],
+    [
+     -0.005513016600161791,
+     0.001467104651965201,
+     0.9999837279319763
+    ]
+   ],
+   "t_m": [
+    -6.565335297636921e-06,
+    8.968690053734463e-06,
+    9.999999747378752e-06
+   ]
+  },
+  "depth_encoding": "16UC1"
+ },
+ "sim": {
+  "scene": "aiw_d405/desk_aiw.usda",
+  "pos": [
+   -0.20071428678901893,
+   -1.211479937718215e-06,
+   1.011669091520584
+  ],
+  "look_at": [
+   0.3731855436625243,
+   6.971717658514693e-05,
+   0.19274358845158346
+  ],
+  "up": [
+   0.0003182251547477218,
+   0.9999999014332297,
+   0.0003096228056600366
+  ],
+  "w": 424,
+  "h": 240,
+  "hfov_deg": 87.0,
+  "model": "d405_r",
+  "K": [
+   [
+    223.40138655956403,
+    0.0,
+    212.0
+   ],
+   [
+    0.0,
+    223.40138655956403,
+    120.0
+   ],
+   [
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "depth": "distance_to_image_plane (m)",
+  "frame": 12758,
+  "time": 1795182028.5746439,
+  "placed": {
+   "badacoconut": {
+    "xy": [
+     -0.0621,
+     -0.1401
+    ],
+    "yaw_deg": 2.3,
+    "front_cm": 23.8,
+    "left_cm": -14.0,
+    "vis": 0.52
+   },
+   "pringles_original_small": {
+    "xy": [
+     0.13,
+     0.0463
+    ],
+    "yaw_deg": 258.2,
+    "front_cm": 43.0,
+    "left_cm": 4.6,
+    "vis": 1.0
+   },
+   "cocacola_zero": {
+    "xy": [
+     0.0157,
+     0.0588
+    ],
+    "yaw_deg": 5.0,
+    "front_cm": 31.6,
+    "left_cm": 5.9,
+    "vis": 1.0
+   }
+  }
+ },
+ "cdm": {
+  "checkpoint": "depth-anything/camera-depth-model-d405 (cdm_d405.ckpt)"
+ }
+}

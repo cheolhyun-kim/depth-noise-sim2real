@@ -1,0 +1,186 @@
+{
+ "camera": "zed_mini",
+ "shot": 6,
+ "captured_at": "2026-11-20T21:27:40.594",
+ "width": 672,
+ "height": 376,
+ "K": [
+  [
+   367.00102,
+   0,
+   336.0
+  ],
+  [
+   0,
+   367.00102,
+   188.0
+  ],
+  [
+   0,
+   0,
+   1
+  ]
+ ],
+ "K_note": "pinhole intrinsics shared by real_rgb, real_depth_mm, sim_*, cdm_* and sim_sdk_* (the simulated camera)",
+ "depth_format": "uint16 PNG in millimetres, 0 = invalid; *.npy is float32 metres",
+ "files": [
+  "real_rgb.png",
+  "real_depth_mm.png",
+  "real_rgb_sensor.png",
+  "real_depth_sensor.png",
+  "sim_rgb.png",
+  "sim_depth_mm.png",
+  "sim_depth_m.npy",
+  "cdm_depth_mm.png",
+  "cdm_depth_m.npy",
+  "sim_sdk_depth_mm.png",
+  "sim_sdk_conf.png",
+  "sim_sdk_left.png"
+ ],
+ "raw_valid_fraction": 0.9762,
+ "sim_fov_coverage": 0.98404,
+ "real_sensor": {
+  "device": "Stereolabs ZED Mini (head camera of a ROBOTIS AI Worker)",
+  "color_intrinsics": {
+   "width": 672,
+   "height": 376,
+   "fx": 363.9717712402344,
+   "fy": 363.9717712402344,
+   "cx": 336.6287536621094,
+   "cy": 180.86094665527344,
+   "distortion_model": "rectified (no distortion)",
+   "distortion_coeffs": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "depth_intrinsics": {
+   "width": 672,
+   "height": 376,
+   "fx": 363.9717712402344,
+   "fy": 363.9717712402344,
+   "cx": 336.6287536621094,
+   "cy": 180.86094665527344,
+   "distortion_model": "rectified (no distortion)",
+   "distortion_coeffs": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "fps": 30,
+  "postprocessing": "none (ZED SDK depth as is)",
+  "sdk": "ZED SDK 5.0.7 via zed-ros2-wrapper",
+  "settings": {
+   "general.camera_model": "zedm",
+   "general.grab_resolution": "VGA",
+   "general.grab_frame_rate": "30",
+   "depth.depth_mode": "NEURAL",
+   "depth.depth_confidence": "95",
+   "depth.depth_texture_conf": "100",
+   "depth.depth_stabilization": "0",
+   "depth.min_depth": "0.1",
+   "depth.max_depth": "10.0"
+  },
+  "topics": [
+   "rgb/image_rect_color",
+   "depth/depth_registered",
+   "rgb/camera_info"
+  ]
+ },
+ "sim": {
+  "camera": "zedm_left (StereoLabs Isaac extension, virtual ZED-M)",
+  "K": [
+   [
+    367.0000185377544,
+    0,
+    336.0
+   ],
+   [
+    0,
+    367.0000185377544,
+    188.0
+   ],
+   [
+    0,
+    0,
+    1
+   ]
+  ],
+  "w": 672,
+  "h": 376,
+  "sdk": {
+   "sdk": "5.6.0",
+   "model": "ZED-M",
+   "W": 672,
+   "H": 376,
+   "fx": 264.8999938964844,
+   "fy": 264.8999938964844,
+   "cx": 336.0,
+   "cy": 188.0,
+   "baseline_m": 0.06300000101327896,
+   "depth_mode": "NEURAL",
+   "confidence_threshold": 95,
+   "texture_confidence_threshold": 100,
+   "fill_mode": 0,
+   "fx_render": 367.0000185377544,
+   "depth_scale_applied": 1.3854285654727794
+  },
+  "scene": {
+   "frame": 17718,
+   "time": 1795177660.5004132,
+   "W": 672,
+   "H": 376,
+   "fx_render": 367.0000185377544,
+   "left_pos": [
+    -0.5449314218284225,
+    0.024982030000000002,
+    1.3303180917723987
+   ],
+   "pitch": 0.69,
+   "scene": "isaac_check/aiw_r3",
+   "res": "VGA",
+   "sim2real": 1,
+   "placed": {
+    "chipchoc": {
+     "xy": [
+      0.0057,
+      0.1033
+     ],
+     "yaw_deg": 299.2,
+     "front_cm": 30.6,
+     "left_cm": 10.3
+    },
+    "samyang_buldak_cup": {
+     "xy": [
+      0.1516,
+      -0.0777
+     ],
+     "yaw_deg": 136.4,
+     "front_cm": 45.2,
+     "left_cm": -7.8
+    },
+    "chilsung_cider": {
+     "xy": [
+      -0.141,
+      -0.1571
+     ],
+     "yaw_deg": 200.4,
+     "front_cm": 15.9,
+     "left_cm": -15.7
+    }
+   }
+  },
+  "depth": "ground truth = distance_to_image_plane (m); sdk = ZED SDK depth (m)",
+  "frame": 8596,
+  "time": 1795177660.9280205
+ },
+ "cdm": {
+  "checkpoint": "depth-anything/camera-depth-model-zed2i-neural (cdm_zed2i_neural.ckpt) - a ZED 2i model applied to ZED Mini data, run offline"
+ }
+}
